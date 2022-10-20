@@ -1,12 +1,12 @@
 function dayTemp(array) {
     let arrayTemp = [];
-    //объявляем функцию
+    //объявляем результирующий пустой массив
 
     for (let i = 0; i < array.length; i++) {
         if (i == array.length - 1) {
             arrayTemp.push(0); // для последнего дня отправляем 0
         }
-        for (let j = i + 1; j < array.length; j++) {
+        for (let j = i + 1; j < array.length; j++) {   //j - отсчитывает количество дней пока температура не увеличится 
             if (array[j] > array[i]) {
                 arrayTemp.push(j - i); // отправляем в конец пустого массива кол-во дней
                 break; // останавливаем цикл
