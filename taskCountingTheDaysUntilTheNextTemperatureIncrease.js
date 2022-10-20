@@ -1,12 +1,10 @@
-let array = [12, 12, 30, 3, 1, -270, 1, 55];
-let arrayTemp = [];
-// если температура больше не поднимается, то возвращаем 0
-function dayTemp() {
+function dayTemp(array) {
+    let arrayTemp = [];
     //объявляем функцию
 
     for (let i = 0; i < array.length; i++) {
         if (i == array.length - 1) {
-            arrayTemp.push(0);
+            arrayTemp.push(0); // для последнего дня отправляем 0
         }
         for (let j = i + 1; j < array.length; j++) {
             if (array[j] > array[i]) {
@@ -18,7 +16,9 @@ function dayTemp() {
             }
         }
     }
+    return arrayTemp;
 }
-
-dayTemp(); //вызывыем  функцию
-console.log(arrayTemp); //выводим массив в консоль
+let array = [12, 3, 1];     // массив температур дней
+console.log(dayTemp(array)); 
+//получаем массив из кол-ва дней до потепления для каждого дня
+// если температура больше не поднимается, то возвращаем 0 для каждого дня ([0, 0, 0])
