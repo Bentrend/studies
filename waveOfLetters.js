@@ -13,4 +13,4 @@ function wave(str) {
   return result;
 }
 
-console.log(wave("codewars"));
+console.log(wave("codewars"));   //['Codewars', 'cOdewars', 'coDewars', 'codEwars', 'codeWars', 'codewArs', 'codewaRs', 'codewarS']
